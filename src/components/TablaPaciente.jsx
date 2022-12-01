@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { deletePacienteById, listPacientes } from "../server/ServerMedicitas";
 
@@ -29,6 +29,13 @@ function TablaPaciente() {
 
     let contadorPacientes = 0;
     return (
+        <Container>
+             <Row className="my-3">
+        <Col><h1>Pacientes</h1></Col>
+        <Col xs={6}></Col>
+        <Col><Link to="/pacientes/registrar"><Button variant="success">Registrar</Button></Link></Col>
+      </Row>
+        
         <Table striped bordered hover>
             <thead>
                 <tr>
@@ -57,6 +64,7 @@ function TablaPaciente() {
                 }
             </tbody>
         </Table>
+        </Container>
 
     )
 }

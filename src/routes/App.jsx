@@ -7,6 +7,7 @@ import { Menu } from '../components/Menu';
 import { NotFound } from '../pages/NotFound';
 import { PacientePage } from '../pages/PacientesPage';
 import { PacienteDetalle } from '../pages/PacienteDetalle';
+import { PacienteForm } from '../pages/PacienteForm';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/contacto" element={<ContactoPage/>}/>
         <Route path="/pacientes" element={<PacientePage/>}/>
+        <Route path="/pacientes/registrar" element={<PacienteForm/>}/>
         <Route path="/pacientes/:id" element={<PacienteDetalle/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
